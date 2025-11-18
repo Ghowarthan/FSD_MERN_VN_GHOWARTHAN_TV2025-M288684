@@ -1,0 +1,525 @@
+/* ================== GOOGLE FONTS & VARIABLES ================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Merriweather:wght@400;700&display=swap');
+
+/* Custom Color Scheme Requirement:
+  - --primary: Main brand color (links, buttons)
+  - --secondary: Accent color (badges, highlights)
+  - --bg-light: Main background
+  - --bg-dark: Header/Footer background
+  - --text-light: Text on dark backgrounds
+  - --text-dark: Text on light backgrounds
+  - --border-color: Subtle borders for cards/tables
+*/
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #6c757d;
+    --bg-light: #f8f9fa;
+    --bg-dark: #343a40;
+    --text-light: #ffffff;
+    --text-dark: #212529;
+    --border-color: #dee2e6;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ================== GLOBAL STYLES & RESET ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Custom Font 1 */
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather', serif;
+    /* Custom Font 2 */
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.25rem;
+    color: var(--bg-dark);
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Utility Class */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* ================== HEADER & NAVIGATION ================== */
+/* Positioning Requirement 1: 'sticky'
+  Flexbox Requirement 1: 'flex' layout for nav
+*/
+header {
+    background-color: var(--bg-dark);
+    padding: 1rem 0;
+    position: sticky;
+    /* Sticky Nav Requirement */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    /* Flexbox Requirement */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-light);
+    font-family: 'Merriweather', serif;
+}
+
+.nav-links {
+    display: flex;
+    /* Flexbox Requirement */
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    font-weight: 500;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    border-bottom-color: var(--primary-color);
+}
+
+
+/* ================== FOOTER ================== */
+footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    /* Flexbox for social links */
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--text-light);
+    font-size: 1.2rem;
+}
+
+/* ================== BUTTONS & CTA ================== */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    /* Border Radius Requirement */
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* ================== HOME PAGE: HERO ================== */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    gap: 2rem;
+    /* Background Gradient Requirement */
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#hero h1 {
+    color: var(--primary-color);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image img {
+    border-radius: 10px;
+    /* Border Radius Requirement */
+    box-shadow: var(--shadow);
+    /* Box Shadow Requirement */
+}
+
+/* ================== HOME PAGE: SKILLS ================== */
+/* Flexbox Requirement 2 */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.skill-item {
+    background-color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    /* Border Radius */
+    box-shadow: var(--shadow);
+    /* Box Shadow */
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+
+/* ================== HOME PAGE: EXPERIENCE ================== */
+.experience-item {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.experience-item ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 0.5rem;
+}
+
+/* ================== PROJECTS PAGE: GRID ================== */
+/* CSS Grid Requirement */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    /* Border Radius */
+    box-shadow: var(--shadow);
+    /* Box Shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Positioning Requirement 2a: 'relative' (for the badge) */
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Positioning Requirement 2b: 'absolute' */
+.project-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.tech-list li {
+    background-color: var(--bg-light);
+    color: var(--secondary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* ================== PROJECTS PAGE: TABLE ================== */
+.table-container {
+    overflow-x: auto;
+    /* Makes table scrollable on small screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    box-shadow: var(--shadow);
+}
+
+table th,
+table td {
+    border: 1px solid var(--border-color);
+    /* Box Model */
+    padding: 0.75rem 1rem;
+    /* Box Model */
+    text-align: left;
+}
+
+table th {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+/* ================== CONTACT PAGE ================== */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+#contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    /* Box Model */
+    border: 1px solid var(--border-color);
+    /* Box Model */
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.contact-info {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+.social-links-contact {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links-contact a {
+    font-weight: 500;
+}
+
+
+/* ################################################################## */
+/* ================== RESPONSIVE DESIGN (MANDATORY) ================== */
+/* ################################################################## */
+
+/* === TABLET BREAKPOINT (768px - 1024px) === */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Layout Adjustments */
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2rem;
+    }
+
+    .hero-text {
+        order: 2;
+        /* Text comes after image */
+    }
+
+    .hero-image {
+        order: 1;
+        margin-bottom: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Grid adjusts to 2 columns */
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+        /* Stack form and info */
+    }
+}
+
+
+/* === MOBILE BREAKPOINT (Less than 768px) === */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    /* Mobile Navigation: Converts to vertical layout */
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.75rem;
+        text-align: center;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+        background: var(--primary-color);
+        border-bottom-color: transparent;
+    }
+
+    /* Layouts adjust to 1 column */
+    .project-grid {
+        grid-template-columns: 1fr;
+        /* Grid adjusts to 1 column */
+    }
+
+    .skills-container {
+        justify-content: flex-start;
+    }
+
+    /* Font sizes scale for readability */
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+}

@@ -1,0 +1,33 @@
+/* Layout container */
+.container {
+    display: flex;
+}
+
+/* Sticky Sidebar */
+.sticky-sidebar {
+    width: 200px;
+    height: 100vh;       /* full height */
+    background: #e6e6e6;
+    padding: 15px;
+    position: sticky;
+    top: 0;              /* sticks to top */
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    height: 2000px;      /* just to enable scrolling */
+    background: #fafafa;
+}
+
+/* Fixed box inside main area */
+.fixed-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffcb00;
+    padding: 10px;
+    border: 1px solid #000;
+    font-weight: bold;
+}

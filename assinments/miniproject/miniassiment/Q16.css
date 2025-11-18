@@ -1,0 +1,20 @@
+/* COMMON LINK STYLE */
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+}
+
+/* INLINE MENU — ALL LINKS IN ONE ROW */
+.menu-inline a {
+    display: inline;         /* links appear side-by-side */
+    background-color: lightblue;
+}
+
+/* BLOCK MENU — LINKS STACKED VERTICALLY */
+.menu-block a {
+    display: block;          /* each link on a new line */
+    background-color: lightgreen;
+    width: 150px;            /* optional fixed width */
+}

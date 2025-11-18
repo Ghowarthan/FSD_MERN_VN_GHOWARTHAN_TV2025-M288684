@@ -1,0 +1,10 @@
+/* EXTERNAL CSS FILE */
+
+/* Applied to .external-box div */
+.external-box {
+    background-color: #ffe6cc;
+    padding: 20px;
+    border: 2px solid orange;
+    margin-top: 20px;
+    text-align: center;
+}

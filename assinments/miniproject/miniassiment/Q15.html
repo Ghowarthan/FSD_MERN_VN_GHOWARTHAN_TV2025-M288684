@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning Example</title>
+
+    <style>
+        .container {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            margin-bottom: 50px;
+            position: relative; /* Needed for absolute positioning */
+        }
+
+        /* Normal Box */
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: lightgray;
+            margin: 10px;
+        }
+
+        /* Relative Box: moves 20px right & 20px down */
+        .relative-box {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+
+        /* Absolute Box: placed at bottom-right of parent container */
+        .absolute-box {
+            width: 150px;
+            height: 150px;
+            background-color: lightgreen;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        /* Fixed Box: stays at bottom-left of screen even while scrolling */
+        .fixed-box {
+            width: 150px;
+            height: 150px;
+            background-color: lightcoral;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+
+        body {
+            height: 1500px; /* To allow scrolling */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Positioning Example</h2>
+
+<div class="container">
+    <div class="box">Normal Box</div>
+    <div class="relative-box">Relative Box<br>(20px right/down)</div>
+    <div class="absolute-box">Absolute Box<br>(Bottom-Right)</div>
+</div>
+
+<div class="fixed-box">
+    Fixed Box<br>(Bottom-Left)
+</div>
+
+</body>
+</html>

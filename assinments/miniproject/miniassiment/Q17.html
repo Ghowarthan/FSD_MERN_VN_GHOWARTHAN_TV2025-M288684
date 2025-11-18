@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Photo Gallery</title>
+
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery a img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .gallery a img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+<body>
+
+    <h2 style="text-align:center;">Flexbox Image Gallery (3 per row)</h2>
+
+    <div class="gallery">
+
+        <!-- Image 1 -->
+        <a href="https://en.wikipedia.org/wiki/Tiger" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Tiger.50.jpg" alt="Tiger">
+        </a>
+
+        <!-- Image 2 -->
+        <a href="https://en.wikipedia.org/wiki/Cat" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" alt="Cat">
+        </a>
+
+        <!-- Image 3 -->
+        <a href="https://en.wikipedia.org/wiki/Dog" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Brooks_Chase_Ranger_of_Jolly_Dogs_Jack_Russell.jpg" alt="Dog">
+        </a>
+
+        <!-- Image 4 -->
+        <a href="https://en.wikipedia.org/wiki/Elephant" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/African_Bush_Elephant.jpg" alt="Elephant">
+        </a>
+
+        <!-- Image 5 -->
+        <a href="https://en.wikipedia.org/wiki/Lion" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg" alt="Lion">
+        </a>
+
+        <!-- Image 6 -->
+        <a href="https://en.wikipedia.org/wiki/Panda" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Grosser_Panda.JPG" alt="Panda">
+        </a>
+
+    </div>
+
+</body>
+</html>

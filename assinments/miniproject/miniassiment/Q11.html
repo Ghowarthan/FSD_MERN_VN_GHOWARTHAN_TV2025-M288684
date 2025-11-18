@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Methods Styling</title>
+
+    <!-- INTERNAL CSS (styled inside <style> tag) -->
+    <style>
+        /* Internal CSS: Styling a section */
+        .internal-section {
+            background-color: lightblue;
+            padding: 20px;
+            border: 2px dashed darkblue;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <!-- Linking External CSS file -->
+    <link rel="stylesheet" href="Q11.css"> 
+</head>
+<body>
+    <!-- INLINE CSS (directly inside tag) -->
+    <!-- Inline CSS Example -->
+    <h1 style="color: green; text-align: center;">Welcome to CSS Methods Demo</h1>
+
+    <!-- INTERNAL CSS applied here -->
+    <div class="internal-section">
+        <h2>This section uses INTERNAL CSS</h2>
+        <p>Internal CSS is written inside the style tag in the head.</p>
+    </div>
+
+    <!-- EXTERNAL CSS applied here -->
+    <div class="external-box">
+        <h2>This section uses EXTERNAL CSS</h2>
+        <p>External CSS is written in a separate stylesheet (Q11.css).</p>
+    </div>
+</body>
+</html>

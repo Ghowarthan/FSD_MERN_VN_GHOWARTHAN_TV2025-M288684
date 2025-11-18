@@ -1,0 +1,43 @@
+/* GRID LAYOUT */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;   /* 1/4 2/4 1/4 width layout */
+    grid-template-rows: auto 1fr auto;    /* Header - Content area - Footer */
+    height: 100vh;
+    gap: 10px;
+}
+
+/* Header spans full width */
+.header {
+    grid-column: 1 / 4; /* spans all 3 columns */
+    background: #6495ed;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* Sidebar (left) */
+.sidebar {
+    background: #f4a460;
+    padding: 20px;
+}
+
+/* Main content (center) */
+.main {
+    background: #90ee90;
+    padding: 20px;
+}
+
+/* Widget panel (right) */
+.widgets {
+    background: #ffb6c1;
+    padding: 20px;
+}
+
+/* Footer spans full width */
+.footer {
+    grid-column: 1 / 4; /* spans all 3 columns */
+    background: #9370db;
+    padding: 20px;
+    text-align: center;
+}
